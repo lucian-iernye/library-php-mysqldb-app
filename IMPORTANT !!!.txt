@@ -1,0 +1,10 @@
+Buna ziua. M-am gandit sa va scriu aici ce mai imi vine in minte acum referitor la ce nu functioneaza sau la ce ar trebui modificat.
+Am incercat sa completez formularul dupa ce am cumparat o carte, merge, primesc mesajul ca multumim ca ati cumparat de la noi dar sus apare o eroare de mail si eroarea "Undefined variable: totalGeneral in C:\wamp\www\www.librariauav.ro\prelucrare.php on line 116".
+De asemenea am verificat in baza de date si mi-a inserat in tranzactii toate datele pe care le-am completat. Asta a iesit bine.
+
+Inca o problema e cu casuta aceea care afiseaza cate carti sunt in cos. atunci cand e gol cosul imi arata o eroare, cand introduc in cos o carte dispare eroarea.
+
+La cautare, cand caut un autor, si dau click pe el (ma trimite in autor.php) dar nu imi afiseaza bine cartile respective acelui autor. Imi afiseaza doar cartile dnei Adela Draucean.
+
+In domenii la id_domeniu=10, respectiv domeniu 11, 12, si 13 imi afiseaza ce carti sunt in id_domeniu=1.
+
