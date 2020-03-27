@@ -91,7 +91,7 @@ if($nrCarti == 0)
 }
 include("conectare.php");
 $sqlTranzactie = "insert into tranzactii(nume, prenume, cnp, email, telefon, judet, localitate, strada, numar, bloc, scara, etaj, apart, cod_postal) values ('".$_POST['nume']."','".$_POST['prenume']."','".$_POST['cnp']."','".$_POST['email']."','".$_POST['telefon']."','".$_POST['judet']."','".$_POST['localitate']."','".$_POST['strada']."','".$_POST['numar']."','".$_POST['bloc']."','".$_POST['scara']."','".$_POST['etaj']."','".$_POST['apart']."','".$_POST['cod_postal']."')";
-$resursaTranzactie = mysqli_query($sqlTranzactie);
+$resursaTranzactie = mysqli_query(OpenCon(), $sqlTranzactie);
 $id_tranzactie = mysqli_insert_id();
 for($i=0; $i<count($_SESSION['id_carte']); $i++)
 {

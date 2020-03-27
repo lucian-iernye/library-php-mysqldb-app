@@ -7,7 +7,7 @@ include("meniu.php");
 <?php
 $id_carte = $_GET['id_carte'];
 $sql = "SELECT * FROM carti, autori WHERE id_carte=".$id_carte." AND carti.id_autor=autori.id_autor";
-$resursa = mysqli_query($sql);
+$resursa = mysqli_query(OpenCon(), $sql);
 $row = mysqli_fetch_array($resursa);
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
@@ -51,7 +51,7 @@ print '<td valign="middle">
 
 <?php
 $sqlComentarii = "SELECT * FROM comentarii WHERE id_carte=".$id_carte;
-$resursaComentarii = mysqli_query($sqlComentarii);
+$resursaComentarii = mysqli_query(OpenCon(), $sqlComentarii);
 while($row = mysqli_fetch_array($resursaComentarii))
 {
 print '<div style="width: 400px; border: 1px solid #ffffff; background-color:#E6F3FF; padding:5px">

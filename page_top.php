@@ -6,7 +6,7 @@
 <title>Editura Universitatii Aurel Vlaicu - Arad</title>
 
 
-<script type="text/javascript">
+<script type="text/javascript" async defer>
 var imgs1 = new Array("banner/banner1.jpg","banner/banner2.jpg","banner/banner3.jpg","banner/banner4.jpg","banner/banner5.jpg","banner/banner6.jpg","banner/banner7.jpg","banner/banner8.jpg","banner/banner9.jpg","banner/banner10.jpg","banner/banner11.jpg","banner/banner12.jpg","banner/banner13.jpg","banner/banner14.jpg","banner/banner15.jpg");
 var lnks1 = new Array("index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php");
 var alt1 = new Array("Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad");
@@ -30,7 +30,7 @@ var link1 = document.getElementById('adLink1');
 
 <body bgcolor="#C0DFFD">
 
-<div id="top">Editura Universitatii Aurel Vlaicu - Arad
+<div id="top">Lucian Iernye - Library PHP Project
 </div><p />
 
 

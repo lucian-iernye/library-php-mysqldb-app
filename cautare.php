@@ -15,7 +15,7 @@ print '
 <blockquote>
 <?php
 $sql = "SELECT id_autor, nume_autor FROM autori WHERE nume_autor LIKE '%".$cuvant."%'";
-$resursa = mysqli_query($sql);
+$resursa = mysqli_query(OpenCon(), $sql);
 if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";
@@ -30,7 +30,7 @@ while($row=mysqli_fetch_array($resursa))
 <blockquote>
 <?php
 $sql = "SELECT id_carte, titlu FROM carti WHERE titlu LIKE '%".$cuvant."%'";
-$resursa = mysqli_query($sql);
+$resursa = mysqli_query(OpenCon(), $sql);
 if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";
@@ -45,7 +45,7 @@ while($row=mysqli_fetch_array($resursa))
 <blockquote>
 <?php
 $sql = "SELECT id_carte, titlu, descriere FROM carti WHERE descriere LIKE '%".$cuvant."%'";
-$resursa = mysqli_query($sql);
+$resursa = mysqli_query(OpenCon(), $sql);
 if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";

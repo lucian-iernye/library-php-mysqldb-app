@@ -1,10 +1,11 @@
+
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" bgcolor="#E6F3FF" valign="top" width="223px">
 <center><b>Domenii</b></center>
 <hr size="1" color="#000033">
 
 <?php
 $sql = "SELECT * FROM domenii";
-$resursa = mysqli_query($sql);
+$resursa = mysqli_query(OpenCon(), $sql);
 while($row =
    mysqli_fetch_array($resursa))
    {
