@@ -7,8 +7,8 @@ include("meniu.php");
 <?php
 $id_domeniu = $_GET['id_domeniu'];
 $sqlNumeDomeniu = "SELECT nume_domeniu FROM domenii WHERE id_domeniu=".$id_domeniu;
-$resursaNumeDomeniu = mysql_query($sqlNumeDomeniu);
-$numeDomeniu = mysql_result ($resursaNumeDomeniu, 0, "nume_domeniu");
+$resursaNumeDomeniu = mysqli_query($sqlNumeDomeniu);
+$numeDomeniu = mysqli_result ($resursaNumeDomeniu, 0, "nume_domeniu");
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
 <?php
@@ -18,8 +18,8 @@ print '<b>Carti in domeniul
 <table cellpadding="4" border="0">
 <?php
 $sql = "SELECT * FROM carti, autori, domenii WHERE carti.id_domeniu=domenii.id_domeniu AND carti.id_autor=autori.id_autor AND domenii.id_domeniu=".$id_domeniu['id_domeniu'];
-$resursa = mysql_query($sql);
-while($row = mysql_fetch_array($resursa))
+$resursa = mysqli_query($sql);
+while($row = mysqli_fetch_array($resursa))
 {
 ?>
 <tr>

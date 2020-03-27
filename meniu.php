@@ -4,9 +4,9 @@
 
 <?php
 $sql = "SELECT * FROM domenii";
-$resursa = mysql_query($sql);
+$resursa = mysqli_query($sql);
 while($row =
-   mysql_fetch_array($resursa))
+   mysqli_fetch_array($resursa))
    {
 	   print '<a href="domeniu.php?id_domeniu='.$row['id_domeniu'].'">'.$row['nume_domeniu'].'</a><br>';
    }

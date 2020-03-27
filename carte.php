@@ -7,8 +7,8 @@ include("meniu.php");
 <?php
 $id_carte = $_GET['id_carte'];
 $sql = "SELECT * FROM carti, autori WHERE id_carte=".$id_carte." AND carti.id_autor=autori.id_autor";
-$resursa = mysql_query($sql);
-$row = mysql_fetch_array($resursa);
+$resursa = mysqli_query($sql);
+$row = mysqli_fetch_array($resursa);
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
 <table border="0">
@@ -51,8 +51,8 @@ print '<td valign="middle">
 
 <?php
 $sqlComentarii = "SELECT * FROM comentarii WHERE id_carte=".$id_carte;
-$resursaComentarii = mysql_query($sqlComentarii);
-while($row = mysql_fetch_array($resursaComentarii))
+$resursaComentarii = mysqli_query($sqlComentarii);
+while($row = mysqli_fetch_array($resursaComentarii))
 {
 print '<div style="width: 400px; border: 1px solid #ffffff; background-color:#E6F3FF; padding:5px">
 <a href="mailto:'.$row['adresa_email'].'">'.$row['nume_utilizator'].'</a><br>'.$row['comentariu'].'</div>';

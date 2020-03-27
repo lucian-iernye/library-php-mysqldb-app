@@ -15,12 +15,12 @@ print '
 <blockquote>
 <?php
 $sql = "SELECT id_autor, nume_autor FROM autori WHERE nume_autor LIKE '%".$cuvant."%'";
-$resursa = mysql_query($sql);
-if(mysql_num_rows($resursa) == 0)
+$resursa = mysqli_query($sql);
+if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";
  }
-while($row=mysql_fetch_array($resursa))
+while($row=mysqli_fetch_array($resursa))
  {
  print '<a href="autor.php?id_autor='.$row['id_autor'].'">'.$row['nume_autor'].'</a><br>';
  }
@@ -30,12 +30,12 @@ while($row=mysql_fetch_array($resursa))
 <blockquote>
 <?php
 $sql = "SELECT id_carte, titlu FROM carti WHERE titlu LIKE '%".$cuvant."%'";
-$resursa = mysql_query($sql);
-if(mysql_num_rows($resursa) == 0)
+$resursa = mysqli_query($sql);
+if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";
  }
-while($row=mysql_fetch_array($resursa))
+while($row=mysqli_fetch_array($resursa))
  {
  print '<a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>';
  }
@@ -45,12 +45,12 @@ while($row=mysql_fetch_array($resursa))
 <blockquote>
 <?php
 $sql = "SELECT id_carte, titlu, descriere FROM carti WHERE descriere LIKE '%".$cuvant."%'";
-$resursa = mysql_query($sql);
-if(mysql_num_rows($resursa) == 0)
+$resursa = mysqli_query($sql);
+if(mysqli_num_rows($resursa) == 0)
  {
  print "<i>Nici un rezultat</i>";
  }
-while($row=mysql_fetch_array($resursa))
+while($row=mysqli_fetch_array($resursa))
  {
  print '<a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>'.$row['descriere'].'<br><br>';
  }

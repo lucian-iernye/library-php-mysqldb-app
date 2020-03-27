@@ -11,9 +11,9 @@ include("meniu.php");
 <tr>
 <?php
 $sql = "SELECT * FROM carti, autori WHERE carti.id_autor=autori.id_autor ORDER BY an_aparitie DESC limit 0,3";
-$resursa = mysql_query($sql);
+$resursa = mysqli_query($sql);
 while($row = 
-   mysql_fetch_array($resursa))
+   mysqli_fetch_array($resursa))
    {
    /*deschidem celula tabelului HTML*/
    print '<td align="center" width=33%>';
@@ -44,13 +44,13 @@ while($row =
    <tr>
    <?php
    $sqlVanzari = "SELECT id_carte, sum(nr_buc) AS bucatiVandute FROM vanzari GROUP BY id_carte ORDER BY bucatiVandute DESC LIMIT 0,3";
-   $resursaVanzari=mysql_query($sqlVanzari);
-   while($rowVanzari = mysql_fetch_array($resursaVanzari))
+   $resursaVanzari=mysqli_query($sqlVanzari);
+   while($rowVanzari = mysqli_fetch_array($resursaVanzari))
    {
    $sqlCarte = "SELECT * FROM carti, autori WHERE carti.id_autor=autori.id_autor AND id_carte=".$rowVanzari['id_carte'];
-   $resursaCarte=mysql_query($sqlCarte);
+   $resursaCarte=mysqli_query($sqlCarte);
    
-   while($rowCarte = mysql_fetch_array($resursaCarte))
+   while($rowCarte = mysqli_fetch_array($resursaCarte))
    {
    print '<td align="center" width=33%>';
    $adresaImagine = "coperte/".$rowVanzari['id_carte'].".jpg";

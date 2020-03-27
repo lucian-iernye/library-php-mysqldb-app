@@ -1,4 +1,4 @@
 <?php
-@mail("lucian_iernye@yahoo.com", "test mesaj smtp", "testing");
+@mail("lucian.iernye@gmail.com", "test mesaj smtp", "testing");
 print "ok";
 ?>

@@ -91,8 +91,8 @@ if($nrCarti == 0)
 }
 include("conectare.php");
 $sqlTranzactie = "insert into tranzactii(nume, prenume, cnp, email, telefon, judet, localitate, strada, numar, bloc, scara, etaj, apart, cod_postal) values ('".$_POST['nume']."','".$_POST['prenume']."','".$_POST['cnp']."','".$_POST['email']."','".$_POST['telefon']."','".$_POST['judet']."','".$_POST['localitate']."','".$_POST['strada']."','".$_POST['numar']."','".$_POST['bloc']."','".$_POST['scara']."','".$_POST['etaj']."','".$_POST['apart']."','".$_POST['cod_postal']."')";
-$resursaTranzactie = mysql_query($sqlTranzactie);
-$id_tranzactie = mysql_insert_id();
+$resursaTranzactie = mysqli_query($sqlTranzactie);
+$id_tranzactie = mysqli_insert_id();
 for($i=0; $i<count($_SESSION['id_carte']); $i++)
 {
  if($_SESSION['nr_buc'][$i] > 0)
@@ -100,7 +100,7 @@ for($i=0; $i<count($_SESSION['id_carte']); $i++)
 //cream interogarea
   $sqlVanzare = "INSERT INTO vanzari values ('".$id_tranzactie."','".$_SESSION['id_carte'][$i]."','".$_SESSION['nr_buc'][$i]."')";
 //si o rulam
-  mysql_query($sqlVanzare);
+  mysqli_query($sqlVanzare);
   }
 }
 $emailDestinatar = "lucian.iernye@gmail.com";
