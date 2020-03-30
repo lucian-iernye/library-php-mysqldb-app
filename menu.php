@@ -1,4 +1,3 @@
-
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" bgcolor="#E6F3FF" valign="top" width="223px">
 <center><b>Genre</b></center>
 <hr size="1" color="#000033">

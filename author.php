@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("db_conection.php");
+include("db_connection.php");
 include("page_top.php");
 include("menu.php");
 ?>
@@ -40,7 +40,7 @@ print '<div style="width:200px; height:230px; border : 1px black solid; backgrou
 
 print '</td>
 <td>
-<b><a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br />
+<b><a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br />
 <i>de '.$numeAutor.'</i>
 <br />Pret: '.$row['pret'].'lei
 </td>

@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("conectare.php");
+include("db_connection.php");
 include("page_top.php");
-include("meniu.php");
+include("menu.php");
 $actiune = $_GET['actiune'];
 if(isset($_GET['actiune'])&& $_GET['actiune'] == "adauga")
 {
@@ -24,7 +24,7 @@ for($i=0; $i<count($_SESSION['id_carte']); $i++)
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
 <div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold" align="center">Cosul de cumparaturi</div>
-<form action="cos.php?actiune=modifica" method="post">
+<form action="shopping_cart.php?action=modifica" method="post">
 <table align="center" style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" border="0" cellpadding="4" width="600">
 <tr>
 <td><b>Nr. buc</b></td>
@@ -65,10 +65,10 @@ print '<tr><td align="right" colspan="3"><b>Total in cos</b></td><td align="righ
 <div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold" align="center">Continuare</div>
 <table align="center" style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" border="0" width="600">
 <tr><td align="left" width="300">
-<center><img src="butoane/cos2.jpg" height="34" width="70" /><br />
+<center><img src="buttons/cos2.jpg" height="34" width="70" /><br />
 <a href="index.php">Continuati Cumparaturile</a></center></td>
 <td align="left" width="300">
-<center><img src="butoane/cos1.jpg" height="34" width="70" /><br />
+<center><img src="buttons/cos1.jpg" height="34" width="70" /><br />
 <a href="shopping_checkout.php">Mergeti la Casa</a></center></td>
 </tr>
 </table>

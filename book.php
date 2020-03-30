@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("db_conection.php");
+include("db_connection.php");
 include("page_top.php");
 include("menu.php");
 ?>
