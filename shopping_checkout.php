@@ -1,18 +1,18 @@
 <?php
 session_start();
-include("conectare.php");
+include("db_connection.php");
 include("page_top.php");
-include("meniu.php");
+include("menu.php");
 ?>
 <link href="style.css" rel="stylesheet" type="text/css" />
 
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
-<div align="center" style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Continut cos</div><br />
+<div align="center" style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Shopping cart</div><br />
 <table border="0" style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" width="600px" align="center">
 <tr>
-<td><b>Nr. buc</b></td>
-<td><b>Carte</b></td>
-<td><b>Pret</b></td>
+<td><b>Quantity</b></td>
+<td><b>Book</b></td>
+<td><b>Price</b></td>
 <td><b>Total</b></td>
 </tr>
 <?php
@@ -22,39 +22,39 @@ for($i = 0; $i < count($_SESSION['id_carte']); $i++)
   if ($_SESSION['nr_buc'][$i] != 0)
   {
   print '<tr><td>'.$_SESSION['nr_buc'][$i].'</td>
-  <td><b>'.$_SESSION['titlu'][$i].'</b> de '.$_SESSION['nume_autor'][$i].'</td>
+  <td><b>'.$_SESSION['titlu'][$i].'</b> by '.$_SESSION['nume_autor'][$i].'</td>
   <td align="right">
-  '.$_SESSION['pret'][$i].' lei</td>
+  '.$_SESSION['pret'][$i].' pounds.</td>
   <td align="right">
-  '.($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]).' lei</td></tr>';
+  '.($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]).' pounds.</td></tr>';
   $totalGeneral = $totalGeneral + ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]);
   } 
 }
 //si totalul general
 print '<tr>
 <td align="right" colspan="3">
-<b>Total de plata</b></td>
+<b>Total to pay</b></td>
 <td align="right">
-<b>'.$totalGeneral.'</b> lei</td>
+<b>'.$totalGeneral.'</b> pounds.</td>
 </tr>';
 ?>
 </table>
 <br /><br />
-<div align="center" style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Detalii livrare</div><br />
-<form action="prelucrare.php" method="post">
+<div align="center" style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Delivery informations</div><br />
+<form action="processing.php" method="post">
 <table align="center" border="0" style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" width="600px">
 <tr>
 <td>
 <!--aici tabel-->
 <table border="0">
 <tr align="right">
-<td><b>Nume<font color="#FF0000">*</font>:</b></td>
-<td><input type="text" name="nume" /></td>
+<td><b>First Name<font color="#FF0000">*</font>:</b></td>
+<td><input type="text" name="first name" /></td>
 </tr>
 
 <tr align="right">
-<td><b>CNP<font color="#FF0000">*</font>:</b></td>
-<td><input type="text" name="cnp" /></td>
+<td><b>Phone number<font color="#FF0000">*</font>:</b></td>
+<td><input type="text" name="phone number" /></td>
 </tr>
 
 <tr align="right">
@@ -63,11 +63,11 @@ print '<tr>
 </tr>
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <tr align="right">
-<td><b>Judet<font color="#FF0000">*</font>:</b></td>
+<td><b>City<font color="#FF0000">*</font>:</b></td>
 <td>
 <select name="judet">
 
-    <option value="judet" selected="selected">Selectati un judet:</option>
+    <option value="judet" selected="selected">Select a city:</option>
     
     <option value="judet">Alba</option>
     
@@ -217,10 +217,10 @@ print '<tr>
 </td>
 </tr>
 </table>
-<center><input type="submit" value="Trimiteti comanda !" style="background-color:#000096; color:#E6F3FF" /></center>
+<center><input type="submit" value="Send the order !" style="background-color:#000096; color:#E6F3FF" /></center>
 </form>
 </div>
-Toate celulele cu steluta (*) sunt obligatorii !
+All fields with (*) need to be completed !
 </td>
 <?php
 include("page_bottom.php");

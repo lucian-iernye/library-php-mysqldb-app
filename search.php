@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("conectare.php");
+include("db_conection.php");
 include("page_top.php");
-include("meniu.php");
+include("menu.php");
 $cuvant = $_GET['cuvant'];
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
@@ -22,7 +22,7 @@ if(mysqli_num_rows($resursa) == 0)
  }
 while($row=mysqli_fetch_array($resursa))
  {
- print '<a href="autor.php?id_autor='.$row['id_autor'].'">'.$row['nume_autor'].'</a><br>';
+ print '<a href="author.php?id_autor='.$row['id_autor'].'">'.$row['nume_autor'].'</a><br>';
  }
 ?>
 </blockquote>
@@ -37,7 +37,7 @@ if(mysqli_num_rows($resursa) == 0)
  }
 while($row=mysqli_fetch_array($resursa))
  {
- print '<a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>';
+ print '<a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>';
  }
 ?>
 </blockquote>
@@ -52,7 +52,7 @@ if(mysqli_num_rows($resursa) == 0)
  }
 while($row=mysqli_fetch_array($resursa))
  {
- print '<a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>'.$row['descriere'].'<br><br>';
+ print '<a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a><br>'.$row['descriere'].'<br><br>';
  }
 ?>
 </blockquote>

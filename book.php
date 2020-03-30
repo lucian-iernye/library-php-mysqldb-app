@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("conectare.php");
+include("db_conection.php");
 include("page_top.php");
-include("meniu.php");
+include("menu.php");
 ?>
 <?php
 $id_carte = $_GET['id_carte'];
@@ -15,17 +15,17 @@ $row = mysqli_fetch_array($resursa);
 <tr>
 <td valign="top">
 <?php
-$adresaImagine = "coperte/".$id_carte.".jpg";
+$adresaImagine = "covers/".$id_carte.".jpg";
 /*daca avem imagine pentru coperta, o afisam, iar daca nu avem, nu afisam nimic:*/
 if (file_exists($adresaImagine))
 {
 print '<img src="'.$adresaImagine.'" width="200" height="230" hspace="10"><br>
-<form action="cos.php?actiune=adauga" method="post">
+<form action="shopping_cart.php?actiune=adauga" method="post">
 <input type="hidden" name="id_carte" value="'.$id_carte.'" />
 <input type="hidden" name="titlu" value="'.$row['titlu'].'" />
 <input type="hidden" name="nume_autor" value="'.$row['nume_autor'].'" />
 <input type="hidden" name="pret" value="'.$row['pret'].'" />
-<center><input type="submit" value="Cumparati Acum  !" style="background-color:#000096; color:#E6F3FF" /></center>
+<center><input type="submit" value="Buy Now !" style="background-color:#000096; color:#E6F3FF" /></center>
 </form>';
 }
 ?>
@@ -64,7 +64,7 @@ print '<div style="width: 400px; border: 1px solid #ffffff; background-color:#E6
 <center>
 <div style="width:600px; border:1px solid #632415; background-color:#E6F3FF; padding:5px">
 <div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Opinia dvs.:</div>
-<form action="adauga_comentariu.php" method="post">
+<form action="add_comment.php" method="post">
 Nume: <input type="text" name="nume_utilizator" /><br /><br />
 Email: <input type="text" name="adresa_email" /><br /><br />
 Comentariu:<br />

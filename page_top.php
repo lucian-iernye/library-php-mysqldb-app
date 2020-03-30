@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library project PHP and MySQL</title>
 
-<title>Editura Universitatii Aurel Vlaicu - Arad</title>
+  <script type="text/javascript" async defer>
 
-
-<script type="text/javascript" async defer>
 var imgs1 = new Array("banner/banner1.jpg","banner/banner2.jpg","banner/banner3.jpg","banner/banner4.jpg","banner/banner5.jpg","banner/banner6.jpg","banner/banner7.jpg","banner/banner8.jpg","banner/banner9.jpg","banner/banner10.jpg","banner/banner11.jpg","banner/banner12.jpg","banner/banner13.jpg","banner/banner14.jpg","banner/banner15.jpg");
 var lnks1 = new Array("index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php","index.php");
 var alt1 = new Array("Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad","Editura UAV Arad");
@@ -25,8 +25,8 @@ var link1 = document.getElementById('adLink1');
 }
   window.setInterval("cycle1()",4000);
 </script>
-</head>
 
+</head>
 
 <body bgcolor="#C0DFFD">
 

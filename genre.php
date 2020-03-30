@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("conectare.php");
+include("db_conection.php");
 include("page_top.php");
-include("meniu.php");
+include("menu.php");
 ?>
 <?php
 $id_domeniu = $_GET['id_domeniu'];
@@ -25,19 +25,19 @@ while($row = mysqli_fetch_array($resursa))
 <tr>
 <td align="center">
 <?php
-$adresaImagine = "coperte/".$row['id_carte'].".jpg";
+$adresaImagine = "covers/".$row['id_carte'].".jpg";
 if(file_exists($adresaImagine))
 {
 print '<img src="'.$adresaImagine.'" width="200" height="230"><br>';
 }
 else
 {
-print '<div style="width:200px; height:230px; border : 1px black solid; background-color:#cccccc">Fara imagine</div>';
+print '<div style="width:200px; height:230px; border : 1px black solid; background-color:#cccccc">Without image</div>';
 }
 
 print '</td>
 <td>
-<b><a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br />
+<b><a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br />
 <i>de '.$row['nume_autor'].'</i>
 <br />Pret: '.$row['pret'].'lei
 </td>

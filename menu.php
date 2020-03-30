@@ -1,6 +1,6 @@
 
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" bgcolor="#E6F3FF" valign="top" width="223px">
-<center><b>Domenii</b></center>
+<center><b>Genre</b></center>
 <hr size="1" color="#000033">
 
 <?php
@@ -9,22 +9,22 @@ $resursa = mysqli_query(OpenCon(), $sql);
 while($row =
    mysqli_fetch_array($resursa))
    {
-	   print '<a href="domeniu.php?id_domeniu='.$row['id_domeniu'].'">'.$row['nume_domeniu'].'</a><br>';
+	   print '<a href="genre.php?id_domeniu='.$row['id_domeniu'].'">'.$row['nume_domeniu'].'</a><br>';
    }
 ?>
 <hr size="1" color="#000033">
 <br /><br />
 
-<center><form action="cautare.php" method="get">
-<b>Cautare</b><br>
+<center><form action="search.php" method="get">
+<b>Search</b><br>
 <hr size="1" color="#000033">
-<input type="text" name="cuvant" size="30"><br>
-<input type="submit" value="Cauta" size="20" style="background-color:#FF9966" />
+<input type="text" name="word" size="30"><br>
+<input type="submit" value="search" size="20" style="background-color:#FF9966" />
 </form></center>
 <hr size="1" color="#000033">
 <br /><br />
 
-<center><b>Cos</b>
+<center><b>Shopping Cart</b>
 <hr size="1" color="#000033">
 <?php
 $nrCarti = 0;
@@ -39,9 +39,9 @@ for($i = 0; $i < count($_SESSION['titlu']); $i++)
 ?>
 <?php
 print '
-Aveti <b>'.$nrCarti.'</b> carti in cos, in valoare totala de <b>'.$totalValoare.'</b> lei.<br>
+You have <b>'.$nrCarti.'</b> books in your cart, with total cost of <b>'.$totalValoare.'</b> pounds.<br>
 <div id="simplu">
-<a href="cos.php?actiune=adaugare">Click aici pentru a vedea continutul cosului!</a>
+<a href="shopping_cart.php?actiune=adaugare">Click here to see your shopping cart!</a>
 <div>';
 ?>
 </center>
