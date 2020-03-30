@@ -8,7 +8,7 @@ include("menu.php");
 
 
 <td valign="top" style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" width="767px">
-<div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Prima pagina</div><br />
+<div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">First page</div><br />
 <b> The latest books of Lucian</b>
 <table border="0">
 <tr>
@@ -26,9 +26,9 @@ while ($row = mysqli_fetch_array($resursa)) {
    }
    else
    {
-   print '<div style="width:100px; height:130px; border: 1px black solid; background-color:#cccccc">Fara imagine</div>';
+   print '<div style="width:100px; height:130px; border: 1px black solid; background-color:#cccccc">Without image</div>';
    }
-   print '<b><a href="carte.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br> by
+   print '<b><a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br> by
    <i>'.$row['nume_autor'].'</i><br>
    </td>';
 }
