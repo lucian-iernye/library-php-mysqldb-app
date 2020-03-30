@@ -1,4 +1,4 @@
-let imgs1 = new Array(
+let imgs = new Array(
   "banner/banner1.jpg",
   "banner/banner2.jpg",
   "banner/banner3.jpg",
@@ -16,7 +16,7 @@ let imgs1 = new Array(
   "banner/banner15.jpg"
 );
 
-let links1 = new Array(
+let links = new Array(
   "index.php",
   "index.php",
   "index.php",
@@ -34,7 +34,7 @@ let links1 = new Array(
   "index.php"
 );
 
-let alt1 = new Array(
+let alts = new Array(
   "Editura UAV Arad",
   "Editura UAV Arad",
   "Editura UAV Arad",
@@ -52,19 +52,19 @@ let alt1 = new Array(
   "Editura UAV Arad"
 );
 
-let currentAd1 = 0;
-let imgCt1 = 15;
+let currentAd = 0;
+let imgCounter = 15;
 
-const cycle1 = () => {
-  if (currentAd1 == imgCt1) {
-    currentAd1 = 0;
+const cycle = () => {
+  if (currentAd == imgCounter) {
+    currentAd = 0;
   }
-  let banner1 = document.getElementById("adBanner1");
-  let links1 = document.getElementById("adLink1");
-  banner1.src = imgs1[currentAd1];
-  banner1.alt = alt1[currentAd1];
-  document.getElementById("adLink1").href = links1[currentAd1];
+  let banner = document.getElementById("banner");
+  let links = document.getElementById("link");
+  banner.src = imgs[currentAd];
+  banner.alt = alts[currentAd];
+  document.getElementById("link").href = links[currentAd];
   currentAd1++;
 };
 
-window.setInterval("cycle1()", 4000);
+window.setInterval(cycle(), 4000);

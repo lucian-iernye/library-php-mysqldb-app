@@ -16,10 +16,10 @@
 
 
 
-<a href="index.php" id="adLink1" target="_top">
+<a href="index.php" id="link" target="_top">
 <div align="center">
 <h1>bla bla bla test</h1>
-<img src="./banner/banner4" id="adBanner1" border="0" width="990" height="200" align="middle" />
+<img src="./banner/banner4" id="banner" border="0" width="990" height="200" align="middle" />
 </div>
 </a>
 
