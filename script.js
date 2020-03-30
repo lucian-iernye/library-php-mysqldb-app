@@ -52,8 +52,8 @@ let alt1 = new Array(
   "Editura UAV Arad"
 );
 
-var currentAd1 = 0;
-var imgCt1 = 15;
+let currentAd1 = 0;
+let imgCt1 = 15;
 
 const cycle1 = () => {
   if (currentAd1 == imgCt1) {
