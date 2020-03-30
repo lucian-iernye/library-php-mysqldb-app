@@ -63,7 +63,7 @@ const cycle = () => {
   let links = document.getElementById("link");
   banner.src = imgs[currentAd];
   banner.alt = alts[currentAd];
-  document.getElementById("link").href = links[currentAd];
+  links.href = links[currentAd];
   currentAd1++;
 };
 
