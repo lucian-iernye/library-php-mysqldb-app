@@ -69,7 +69,7 @@ print '<tr><td align="right" colspan="3"><b>Total in cos</b></td><td align="righ
 <a href="index.php">Continuati Cumparaturile</a></center></td>
 <td align="left" width="300">
 <center><img src="butoane/cos1.jpg" height="34" width="70" /><br />
-<a href="casa.php">Mergeti la Casa</a></center></td>
+<a href="shopping_checkout.php">Mergeti la Casa</a></center></td>
 </tr>
 </table>
 <?php

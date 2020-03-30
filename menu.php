@@ -41,7 +41,7 @@ for($i = 0; $i < count($_SESSION['titlu']); $i++)
 print '
 You have <b>'.$nrCarti.'</b> books in your cart, with total cost of <b>'.$totalValoare.'</b> pounds.<br>
 <div id="simplu">
-<a href="shopping_cart.php?actiune=adaugare">Click here to see your shopping cart!</a>
+<a href="shopping_cart.php?action=add">Click here to see your shopping cart!</a>
 <div>';
 ?>
 </center>

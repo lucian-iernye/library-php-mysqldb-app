@@ -20,7 +20,7 @@ $adresaImagine = "covers/".$id_carte.".jpg";
 if (file_exists($adresaImagine))
 {
 print '<img src="'.$adresaImagine.'" width="200" height="230" hspace="10"><br>
-<form action="shopping_cart.php?actiune=adauga" method="post">
+<form action="shopping_cart.php?action=add" method="post">
 <input type="hidden" name="id_carte" value="'.$id_carte.'" />
 <input type="hidden" name="titlu" value="'.$row['titlu'].'" />
 <input type="hidden" name="nume_autor" value="'.$row['nume_autor'].'" />

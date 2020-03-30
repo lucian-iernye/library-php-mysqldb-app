@@ -65,7 +65,7 @@ while ($row = mysqli_fetch_array($resursa)) {
    print '<div style="width:100px; height:130px; border: 1px black solid; background-color:#cccccc">Without image</div>';
    }
    
-   print '<b><a href="carte.php?id_carte='.$rowVanzari['id_carte'].'">'.$rowCarte['titlu'].'</a></b><br> by
+   print '<b><a href="book.php?id_carte='.$rowVanzari['id_carte'].'">'.$rowCarte['titlu'].'</a></b><br> by
    <i>'.$rowCarte['nume_autor'].'</i>
    <br></td>';
       }
