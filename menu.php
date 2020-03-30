@@ -5,12 +5,14 @@
 <?php
 $sql = "SELECT * FROM domenii";
 $resursa = mysqli_query(OpenCon(), $sql);
+
 while($row =
    mysqli_fetch_array($resursa))
    {
 	   print '<a href="genre.php?id_domeniu='.$row['id_domeniu'].'">'.$row['nume_domeniu'].'</a><br>';
    }
 ?>
+
 <hr size="1" color="#000033">
 <br /><br />
 
@@ -25,6 +27,7 @@ while($row =
 
 <center><b>Shopping Cart</b>
 <hr size="1" color="#000033">
+
 <?php
 $nrCarti = 0;
 $totalValoare = 0;
@@ -36,6 +39,7 @@ for($i = 0; $i < count($_SESSION['titlu']); $i++)
   }
 }
 ?>
+
 <?php
 print '
 You have <b>'.$nrCarti.'</b> books in your cart, with total cost of <b>'.$totalValoare.'</b> pounds.<br>
@@ -43,6 +47,7 @@ You have <b>'.$nrCarti.'</b> books in your cart, with total cost of <b>'.$totalV
 <a href="shopping_cart.php?action=add">Click here to see your shopping cart!</a>
 <div>';
 ?>
+
 </center>
 <hr size="1" color="#000033">
 </td>
