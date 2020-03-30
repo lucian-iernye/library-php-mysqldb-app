@@ -64,7 +64,7 @@ const cycle = () => {
   banner.src = imgs[currentAd];
   banner.alt = alts[currentAd];
   links.href = links[currentAd];
-  currentAd1++;
+  currentAd++;
 };
 
 window.setInterval(cycle(), 4000);
