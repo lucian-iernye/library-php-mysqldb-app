@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library project PHP and MySQL</title>
 
-  <script type="text/javascript" async defer>
+  <script type="text/javascript" src="script.js" async defer>
 
 
 </script>
