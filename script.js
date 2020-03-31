@@ -35,21 +35,21 @@ let links = new Array(
 );
 
 let alts = new Array(
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad",
-  "Editura UAV Arad"
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project",
+  "Welcome to my PHP/MySQL project"
 );
 
 let currentAd = 0;
@@ -67,4 +67,4 @@ const cycle = () => {
   currentAd++;
 };
 
-window.setInterval(cycle(), 4000);
+window.setInterval(cycle, 4000);
