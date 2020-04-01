@@ -63,14 +63,14 @@ print '<div style="width: 400px; border: 1px solid #ffffff; background-color:#E6
 
 <center>
 <div style="width:600px; border:1px solid #632415; background-color:#E6F3FF; padding:5px">
-<div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Opinia dvs.:</div>
+<div style="color:#000033; font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold">Your oppinion:</div>
 <form action="add_comment.php" method="post">
-Nume: <input type="text" name="nume_utilizator" /><br /><br />
+Name: <input type="text" name="nume_utilizator" /><br /><br />
 Email: <input type="text" name="adresa_email" /><br /><br />
-Comentariu:<br />
-<textarea name="comentariu" cols="45"></textarea><br /><br />
+Comment:<br />
+<textarea name="comment" cols="45"></textarea><br /><br />
 <input type="hidden" name="id_carte" value="<?=$id_carte?>" />
-<center><input type="submit" value="Adauga" style="background-color:#000096; color:#E6F3FF" /></center>
+<center><input type="submit" value="add" style="background-color:#000096; color:#E6F3FF" /></center>
 </form>
 </div>
 </center>

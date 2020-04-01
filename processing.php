@@ -112,7 +112,7 @@ for ($i=0; $i<count($_SESSION['id_carte']); $i++)
  {
   if($_SESSION['nr_buc'][$i] > 0)
   {
-  $mesaj .="<tr><td>".$_SESSION['titlu'][$i]." de ".$_SESSION['nume_autor'][$i]."</td><td>".  $_SESSION['nr_buc'][$i]." buc</td></tr>";
+  $mesaj .="<tr><td>".$_SESSION['titlu'][$i]." by ".$_SESSION['nume_autor'][$i]."</td><td>".  $_SESSION['nr_buc'][$i]." pcs.</td></tr>";
   $totalGeneral = $totalGeneral + ($_SESSION['nr_buc'][$i] * $_SESSION['pret'][$i]);
   }
  }
@@ -126,8 +126,8 @@ include("page_top.php");
 include("menu.php");
 ?>
 <td valign="top">
-<h1>Multumim !</h1>
-Va multumim ca ati cumparat de la noi ! Veti primi comanda solicitata in cel mai scurt timp.
+<h1>Thanks !</h1>
+Thank you for buying from us ! You will receive your order shortly.
 </td>
 <?php
 include("page_bottom.php");

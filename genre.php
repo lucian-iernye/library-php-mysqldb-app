@@ -38,8 +38,8 @@ print '<div style="width:200px; height:230px; border : 1px black solid; backgrou
 print '</td>
 <td>
 <b><a href="book.php?id_carte='.$row['id_carte'].'">'.$row['titlu'].'</a></b><br />
-<i>de '.$row['nume_autor'].'</i>
-<br />Pret: '.$row['pret'].'lei
+<i>by '.$row['nume_autor'].'</i>
+<br />Price: '.$row['pret'].'pounds.
 </td>
 </tr>';
 }

@@ -157,14 +157,14 @@ print '<tr>
 </tr>
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <tr align="right">
-<td><b>Numar<font color="#FF0000">*</font>:</b></td>
+<td><b>Number<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="numar" /></td>
 </tr>
 
-<tr align="right">
+<!-- <tr align="right">
 <td><b>Scara:</b></td>
 <td><input type="text" name="scara" /></td>
-</tr>
+</tr> -->
 
 <tr align="right">
 <td><b>Apart.:</b></td>
@@ -179,26 +179,26 @@ print '<tr>
 <!--aici tabel-->
 <table border="0">
 <tr align="right">
-<td><b>Prenume<font color="#FF0000">*</font>:</b></td>
+<td><b>Last Name<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="prenume" /></td>
 </tr>
 
 <tr align="right">
-<td><b>Telefon<font color="#FF0000">*</font>:</b></td>
+<td><b>Phone<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="telefon" /></td>
 </tr>
 
 <tr align="right">
-<td><b>Localitate<font color="#FF0000">*</font>:</b></td>
+<td><b>County<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="localitate" /></td>
 </tr>
 
 <tr align="right">
-<td><b>Strada<font color="#FF0000">*</font>:</b></td>
+<td><b>Street<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="strada" /></td>
 </tr>
 
-<tr align="right">
+<!-- <tr align="right">
 <td><b>Bloc:</b></td>
 <td><input type="text" name="bloc" /></td>
 </tr>
@@ -206,10 +206,10 @@ print '<tr>
 <tr align="right">
 <td><b>Etaj:</b></td>
 <td><input type="text" name="etaj" /></td>
-</tr>
+</tr> -->
 
 <tr align="right">
-<td><b>Cod Postal<font color="#FF0000">*</font>:</b></td>
+<td><b>Post Code<font color="#FF0000">*</font>:</b></td>
 <td><input type="text" name="cod_postal" /></td>
 </tr>
 </table>
