@@ -76,7 +76,7 @@ print '<tr>
 <!--aici tabel-->
 <table border="0">
 <tr align="right">
-<td><b>Address:<font color="#FF0000">*</font>:</b></td>
+<td><b>Address:<font color="#FF0000">*</font></b></td>
 <td>
 <select name="city">
 
@@ -154,18 +154,18 @@ print '<tr>
 </tr>
 
 <tr align="right">
-<td><b>Address Line 1<font color="#FF0000">*</font>:</b></td>
+<td><b>Address Line 1:<font color="#FF0000">*</font></b></td>
 <td><input type="text" name="address-one" /></td>
 </tr>
 
 <tr align="right">
-<td><b>Address Line 2</b></td>
-<td><input type="text" name="scara" /></td>
+<td><b>Address Line 2:<font color="#FF0000">*</font></b></td>
+<td><input type="text" name="address-two" /></td>
 </tr>
 
 <tr align="right">
-<td><b>Post Code</b></td>
-<td><input type="text" name="apart" /></td>
+<td><b>Post Code:<font color="#FF0000">*</font></b></td>
+<td><input type="text" name="post-code" /></td>
 </tr>
 </table>
 <!--aici tabel-->
@@ -176,7 +176,7 @@ print '<tr>
 <center><input type="submit" value="Send the order !" style="background-color:#000096; color:#E6F3FF" /></center>
 </form>
 </div>
-All fields with (*) need to be completed !
+<center>All fields with (*) need to be completed !</center>
 </td>
 <?php
 include "page_bottom.php";
