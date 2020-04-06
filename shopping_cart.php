@@ -1,25 +1,21 @@
 <?php
 session_start();
-include("db_connection.php");
-include("page_top.php");
-include("menu.php");
+include "db_connection.php";
+include "page_top.php";
+include "menu.php";
 $action = $_GET['action'];
-if(isset($_GET['action'])&& $_GET['action'] == "add")
-{
-$_SESSION['id_carte'][]=$_POST['id_carte'];
-$_SESSION['nr_buc'][]=1;
-$_SESSION['pret'][]=$_POST['pret'];
-$_SESSION['titlu'][]=$_POST['titlu'];
-$_SESSION['nume_autor'][]=$_POST['nume_autor'];
+if (isset($_GET['action']) && $_GET['action'] == "add") {
+    $_SESSION['id_carte'][] = $_POST['id_carte'];
+    $_SESSION['nr_buc'][] = 1;
+    $_SESSION['pret'][] = $_POST['pret'];
+    $_SESSION['titlu'][] = $_POST['titlu'];
+    $_SESSION['nume_autor'][] = $_POST['nume_autor'];
 }
-if(isset($_GET['action'])&& $_GET['action'] == "modify")
-{
-for($i=0; $i<count($_SESSION['id_carte']); $i++)
-   {
-    $_SESSION['nr_buc'][$i] = $_POST['noulNrBuc'][$i];
-   }
+if (isset($_GET['action']) && $_GET['action'] == "modify") {
+    for ($i = 0; $i < count($_SESSION['id_carte']); $i++) {
+        $_SESSION['nr_buc'][$i] = $_POST['noulNrBuc'][$i];
+    }
 }
-
 
 ?>
 <td style="border-color:#CCCCCC; background-color:#E6F3FF; padding:4px; border:solid #000066 1px" valign="top" width="767px">
@@ -34,26 +30,25 @@ for($i=0; $i<count($_SESSION['id_carte']); $i++)
 </tr>
 <?php
 $totalGeneral = 0;
-for ($i=0; $i<count($_SESSION['id_carte']); $i++)
-{
-if ($_SESSION['nr_buc'][$i] != 0)
+for ($i = 0; $i < count($_SESSION['id_carte']); $i++) {
+    if ($_SESSION['nr_buc'][$i] != 0)
 //doar daca numarul de bucati nu e 0, afiseaza randul
-{
-print '<tr>
-<td><input type="text" name="noulNrBuc['.$i.']" size="1" value="'.$_SESSION['nr_buc'][$i].'">
+    {
+        print '<tr>
+<td><input type="text" name="noulNrBuc[' . $i . ']" size="1" value="' . $_SESSION['nr_buc'][$i] . '">
 </td>
-<td><b>'.$_SESSION['titlu'][$i].'</b> de '.$_SESSION['nume_autor'][$i].'
+<td><b>' . $_SESSION['titlu'][$i] . '</b> de ' . $_SESSION['nume_autor'][$i] . '
 </td>
-<td align="right">'.$_SESSION['pret'][$i].' lei</td>
-<td align="right">'.($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]).' lei</td></tr>';
-$totalGeneral = $totalGeneral + ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]);
+<td align="right">' . $_SESSION['pret'][$i] . ' lei</td>
+<td align="right">' . ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]) . ' lei</td></tr>';
+        $totalGeneral = $totalGeneral + ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]);
+    }
 }
-}
-print '<tr><td align="right" colspan="3"><b>Total in shopping cart</b></td><td align="right"><b>'.$totalGeneral.'</b> pounds.</td></tr>';
+print '<tr><td align="right" colspan="3"><b>Total in shopping cart</b></td><td align="right"><b>' . $totalGeneral . '</b> pounds.</td></tr>';
 ?>
 </table>
-<div align="center">Introduceti <b>0</b> pentru cartile ce doriti sa le scoateti din cos!</div>
-<center><input type="submit" value="Modify" style="background-color:#000096; color:#E6F3FF" /></center>
+<div align="center">Add <b>0</b> for the books which you want to remove from the shopping cart!</div>
+<center><input type="submit" value="modify" style="background-color:#000096; color:#E6F3FF" /></center>
 <br /><br />
 <br /><br />
 <br /><br />
@@ -73,5 +68,5 @@ print '<tr><td align="right" colspan="3"><b>Total in shopping cart</b></td><td a
 </tr>
 </table>
 <?php
-include("page_bottom.php");
+include "page_bottom.php";
 ?>

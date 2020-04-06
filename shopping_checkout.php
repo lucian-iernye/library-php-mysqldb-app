@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("db_connection.php");
-include("page_top.php");
-include("menu.php");
+include "db_connection.php";
+include "page_top.php";
+include "menu.php";
 ?>
 <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -17,25 +17,23 @@ include("menu.php");
 </tr>
 <?php
 $totalGeneral = 0;
-for($i = 0; $i < count($_SESSION['id_carte']); $i++)
-{
-  if ($_SESSION['nr_buc'][$i] != 0)
-  {
-  print '<tr><td>'.$_SESSION['nr_buc'][$i].'</td>
-  <td><b>'.$_SESSION['titlu'][$i].'</b> by '.$_SESSION['nume_autor'][$i].'</td>
+for ($i = 0; $i < count($_SESSION['id_carte']); $i++) {
+    if ($_SESSION['nr_buc'][$i] != 0) {
+        print '<tr><td>' . $_SESSION['nr_buc'][$i] . '</td>
+  <td><b>' . $_SESSION['titlu'][$i] . '</b> by ' . $_SESSION['nume_autor'][$i] . '</td>
   <td align="right">
-  '.$_SESSION['pret'][$i].' pounds.</td>
+  ' . $_SESSION['pret'][$i] . ' pounds.</td>
   <td align="right">
-  '.($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]).' pounds.</td></tr>';
-  $totalGeneral = $totalGeneral + ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]);
-  } 
+  ' . ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]) . ' pounds.</td></tr>';
+        $totalGeneral = $totalGeneral + ($_SESSION['pret'][$i] * $_SESSION['nr_buc'][$i]);
+    }
 }
 //si totalul general
 print '<tr>
 <td align="right" colspan="3">
 <b>Total to pay</b></td>
 <td align="right">
-<b>'.$totalGeneral.'</b> pounds.</td>
+<b>' . $totalGeneral . '</b> pounds.</td>
 </tr>';
 ?>
 </table>
@@ -49,12 +47,12 @@ print '<tr>
 <table border="0">
 <tr align="right">
 <td><b>First Name<font color="#FF0000">*</font>:</b></td>
-<td><input type="text" name="first name" /></td>
+<td><input type="text" name="first-name" /></td>
 </tr>
 
 <tr align="right">
 <td><b>Phone number<font color="#FF0000">*</font>:</b></td>
-<td><input type="text" name="phone number" /></td>
+<td><input type="text" name="phone-number" /></td>
 </tr>
 
 <tr align="right">
@@ -68,9 +66,9 @@ print '<tr>
 <select name="judet">
 
     <option value="judet" selected="selected">Select a city:</option>
-    
+
     <option value="judet">Alba</option>
-    
+
     <option value="judet">Arad</option>
 
 
@@ -180,7 +178,7 @@ print '<tr>
 <table border="0">
 <tr align="right">
 <td><b>Last Name<font color="#FF0000">*</font>:</b></td>
-<td><input type="text" name="prenume" /></td>
+<td><input type="text" name="last-name" /></td>
 </tr>
 
 <tr align="right">
@@ -223,5 +221,5 @@ print '<tr>
 All fields with (*) need to be completed !
 </td>
 <?php
-include("page_bottom.php");
+include "page_bottom.php";
 ?>
