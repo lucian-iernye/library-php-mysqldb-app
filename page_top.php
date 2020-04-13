@@ -22,7 +22,6 @@
 
 <a href="index.php" id="link" target="_top">
 <div align="center">
-<h1>Home</h1>
 <img src="./banner/banner4.jpg" id="banner" border="0" width="990" height="200" align="middle" />
 </div>
 </a>
