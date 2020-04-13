@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library project PHP and MySQL</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+  <link rel="manifest" href="ico/site.webmanifest">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="script.js" async defer></script>
 </head>
